@@ -15,4 +15,4 @@ printf " Done.\n"
 printf "Installing Nping..."
 rpm -vhU https://nmap.org/dist/nping-0.7.00-1.x86_64.rpm
 printf " Done.\n"
-printf "Setup Complete."
+printf "Setup Complete.\n"
