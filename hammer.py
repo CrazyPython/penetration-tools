@@ -145,10 +145,16 @@ if __name__ == '__main__':
 		for i in range(int(thr)):
 			t = threading.Thread(target=dos)
 			t.daemon = True  # if thread is exist, it dies
-			t.start()
+			try:
+				t.start()
+			except RuntimeError:
+				pass
 			t2 = threading.Thread(target=dos2)
 			t2.daemon = True  # if thread is exist, it dies
-			t2.start()
+			try:
+				t2.start()
+			except RuntimeError:
+				pass
 		start = time.time()
 		#tasking
 		item = 0
