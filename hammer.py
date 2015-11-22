@@ -148,13 +148,13 @@ if __name__ == '__main__':
 			try:
 				t.start()
 			except RuntimeError:
-				pass
+				print("Hammer Failed")
 			t2 = threading.Thread(target=dos2)
 			t2.daemon = True  # if thread is exist, it dies
 			try:
 				t2.start()
 			except RuntimeError:
-				pass
+				print("Hammer Failed")
 		start = time.time()
 		#tasking
 		item = 0
